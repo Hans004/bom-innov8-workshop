@@ -1,2 +1,2 @@
-# innov8workshop.github.io
-Innov8 Workshop Skill Gaps 2025
+# bom-innov8-workshop
+Innov8 Workshop Talent Gaps 2025
