@@ -9,50 +9,27 @@ const CTASection = () => {
 
             <AnimatedBackground />
 
-            <div className="relative container mx-auto px-4 text-center">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
-                    Workshop Complete!
-                </h2>
-                <p className="text-xl mb-8 text-slate-300 max-w-3xl mx-auto animate-fade-in delay-300">
-                    Thank you for your participation. Your feedback is crucial for improving future collaborations.
-                </p>
+            <div className="relative container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
+                        Workshop Voting & Feedback
+                    </h2>
+                </div>
 
-                <div className="animate-fade-in delay-500">
-                    <h3 className="text-2xl font-bold mb-8 text-blue-300">
-                        Please scan the QR code to share your feedback
-                    </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fade-in delay-500">
+                    {/* left Side - Top 3 Action Items Voting */}
+                    <div className="flex flex-col items-center text-center">
+                        <h3 className="text-3xl font-bold mb-8 text-green-300">
+                            Top 3 Action Items - Voting
+                        </h3>
 
-                    <div className="flex flex-col items-center justify-center gap-8">
-                        {/* Sample QR Code */}
-                        <div className="bg-white p-8 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
+                        <div className="bg-white p-8 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 mb-6">
                             <div className="w-64 h-64 bg-white rounded-xl flex items-center justify-center">
-                                {/* Sample QR Code Pattern */}
-                                <svg width="240" height="240" viewBox="0 0 240 240" className="border-2 border-gray-200 rounded">
-                                    {/* QR Code pattern simulation */}
-                                    <rect width="240" height="240" fill="white"/>
-
-                                    {/* Corner squares */}
-                                    <rect x="0" y="0" width="70" height="70" fill="black"/>
-                                    <rect x="10" y="10" width="50" height="50" fill="white"/>
-                                    <rect x="20" y="20" width="30" height="30" fill="black"/>
-
-                                    <rect x="170" y="0" width="70" height="70" fill="black"/>
-                                    <rect x="180" y="10" width="50" height="50" fill="white"/>
-                                    <rect x="190" y="20" width="30" height="30" fill="black"/>
-
-                                    <rect x="0" y="170" width="70" height="70" fill="black"/>
-                                    <rect x="10" y="180" width="50" height="50" fill="white"/>
-                                    <rect x="20" y="190" width="30" height="30" fill="black"/>
-
-                                    {/* Random pattern to simulate QR data */}
-                                    {[...Array(20)].map((_, i) => (
-                                        <g key={i}>
-                                            <rect x={80 + (i % 8) * 10} y={20 + Math.floor(i / 8) * 10} width="8" height="8" fill={Math.random() > 0.5 ? "black" : "white"}/>
-                                            <rect x={20 + (i % 8) * 10} y={80 + Math.floor(i / 8) * 10} width="8" height="8" fill={Math.random() > 0.5 ? "black" : "white"}/>
-                                            <rect x={100 + (i % 10) * 10} y={100 + Math.floor(i / 10) * 10} width="8" height="8" fill={Math.random() > 0.5 ? "black" : "white"}/>
-                                        </g>
-                                    ))}
-                                </svg>
+                                <img
+                                    src="/voting-qr.jpeg"
+                                    alt="Top 3 Action Items Voting QR Code"
+                                    className="w-full h-full object-contain rounded-xl"
+                                />
                             </div>
                         </div>
 
@@ -61,12 +38,66 @@ const CTASection = () => {
                                 Or visit directly:
                             </p>
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-3 border border-white/20">
-                                <span className="text-blue-300 font-mono">forms.office.com/workshop-feedback</span>
+                                <a
+                                    href="https://forms.office.com/r/kznwFXwR1u"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-green-300 font-mono hover:text-green-200 transition-colors"
+                                >
+                                    forms.office.com/r/kznwFXwR1u
+                                </a>
                             </div>
+                        </div>
+
+                        <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-sm">
+                            <h4 className="font-bold text-lg mb-2 text-green-300">Vote on Action Items</h4>
+                            <p className="text-slate-300 text-sm">Help prioritize the top 3 action items for bridging academia-industry skill gaps</p>
+                        </div>
+                    </div>
+                    {/* right Side - Workshop Feedback */}
+                    <div className="flex flex-col items-center text-center">
+                        <h3 className="text-3xl font-bold mb-8 text-sky-300">
+                            Workshop Feedback
+                        </h3>
+
+                        <div className="bg-white p-8 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 mb-6">
+                            <div className="w-64 h-64 bg-white rounded-xl flex items-center justify-center">
+                                <img
+                                    src="/feedback-qr.jpeg"
+                                    alt="Workshop Feedback QR Code"
+                                    className="w-full h-full object-contain rounded-xl"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="text-center">
+                            <p className="text-lg text-slate-300 mb-4">
+                                Or visit directly:
+                            </p>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-3 border border-white/20">
+                                <a
+                                    href="https://forms.office.com/r/gAsunSuhHf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sky-300 font-mono hover:text-sky-200 transition-colors"
+                                >
+                                    forms.office.com/r/gAsunSuhHf
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-sm">
+                            <h4 className="font-bold text-lg mb-2 text-sky-300">Share Your Experience</h4>
+                            <p className="text-slate-300 text-sm">Rate the workshop quality, content relevance, and share suggestions for improvement</p>
                         </div>
                     </div>
 
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+                </div>
+
+                {/* Bottom Section - Additional Info */}
+                <div className="mt-16 text-center animate-fade-in delay-700">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                             <h4 className="font-bold text-lg mb-2 text-blue-300">Workshop Experience</h4>
                             <p className="text-slate-300 text-sm">Rate the overall quality and organization</p>
