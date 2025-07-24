@@ -11,18 +11,11 @@ const Schedule = () => {
             color: "bg-gradient-to-r from-blue-500 to-purple-600"
         },
         {
-            time: "13h15 – 13h15",
-            title: "Opening Remarks",
+            time: "13h15 – 13h30",
+            title: "Opening Remarks & Keynote Address",
             description: "Workshop introduction and objectives",
             icon: <MessageSquare className="w-6 h-6" />,
             color: "bg-gradient-to-r from-purple-600 to-pink-600"
-        },
-        {
-            time: "13h15 – 13h30",
-            title: "Keynote Address",
-            description: "Setting the context for skills gap challenges",
-            icon: <TrendingUp className="w-6 h-6" />,
-            color: "bg-gradient-to-r from-pink-600 to-red-500"
         },
         {
             time: "13h30 – 13h45",
